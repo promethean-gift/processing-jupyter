@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "name": "jemez_boundary",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+          "siteName": "Greater Jemez Ecosystem", 
+          "siteID": "JEMZ", 
+          "priority": 1, 
+          "version": 1
+          },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -107.05352783203125,
+              35.390169518834924
+            ],
+            [
+              -106.07437133789062,
+              35.390169518834924
+            ],
+            [
+              -106.07437133789062,
+              36.240950421445
+            ],
+            [
+              -107.05352783203125,
+              36.240950421445
+            ],
+            [
+              -107.05352783203125,
+              35.390169518834924
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

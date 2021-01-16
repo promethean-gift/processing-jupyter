@@ -1,0 +1,15 @@
+{
+    "pipeline": [
+        {
+           "type": "readers.ept",
+           "filename": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_NM_North_Central_B2_2016/ept.json",
+           "bounds": "([-11918571.0, -11790537.0], [4214245.0, 4335420.0])",
+           "threads":"50"
+        },
+	    {
+	    	"type":"filters.reprojection",
+		    "out_srs":"EPSG:26913"
+		},
+	        "output.laz"
+	    ]
+}

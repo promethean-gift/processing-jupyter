@@ -1,0 +1,21 @@
+{
+ 	"pipeline":[
+ 	   "/workspace/jemez/lidar/laz/USGS_LPC_NM_NorthCentral_B2_2016/{}.laz",
+ 	   {
+        "type":"filters.outlier",
+        "method":"statistical",
+        "mean_k":12,
+        "multiplier":2.2
+       },
+       {
+          "type":"filters.range",
+          "limits":"Classification![7:7]"
+       },
+       {
+ 	      "type":"writers.las",
+ 	      "extra_dims": "all",
+          "minor_version" : "4",
+	 	  "filename":"/workspace/jemez/lidar/laz/USGS_LPC_NM_NorthCentral_B2_2016/laz/{}.laz"
+ 	   }
+ 	]
+ }

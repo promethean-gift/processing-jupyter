@@ -1,0 +1,14 @@
+[
+    {
+      "type":"readers.las",
+      "filename":"/workspace/NEON_Downloads/NEON_D01_HARV_DP1_726000_4707000_classified_point_cloud_colorized.laz"
+    },
+    {
+      "type":"writers.tiledb",
+      "config_file":"tiledb.config",
+      "compression":"zstd",
+      "compression_level": 75,
+      "chunk_size": 50000,
+      "array_name":"sample_array"
+    }
+]

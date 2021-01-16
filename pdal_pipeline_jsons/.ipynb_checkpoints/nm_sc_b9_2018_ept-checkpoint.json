@@ -1,0 +1,36 @@
+{
+    "pipeline": [
+        {
+           "type": "readers.ept",
+           "filename": "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/NM_SouthCentral_B9_2018/ept.json",
+           "bounds": "([-11918571.0, -11790537.0], [4214245.0, 4335420.0])",
+           "threads":"50"
+        },
+        {
+            "limits": "Classification![7:7]",
+            "type": "filters.range",
+            "tag": "nonoise"
+        },
+        {
+            "assignment": "Classification[:]=0",
+            "tag": "wipeclasses",
+            "type": "filters.assign"
+        },
+        {
+            "out_srs": "EPSG:26913",
+            "tag": "reprojectUTM",
+            "type": "filters.reprojection"
+        },
+        {
+            "tag": "groundify",
+            "type": "filters.smrf"
+        },
+        {
+            "limits": "Classification[2:2]",
+            "type": "filters.range",
+            "tag": "classify"
+        },
+
+        
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "pipeline": 
+     [
+        {
+            "type":"readers.las",
+            "filename":"/workspace/jemez/lidar/NM_SouthCentral_B9_2018_filt.laz"
+        },
+{   
+            "filename":"/workspace/jemez/NM_SouthCentral_B9_2018_dsm_max.tif",
+            "gdaldriver":"GTiff",
+            "output_type":"max",
+            "resolution":"0.3333",
+            "radius":"0.3333",
+            "type": "writers.gdal"
+        }
+     ]
+}
