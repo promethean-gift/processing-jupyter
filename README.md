@@ -11,7 +11,7 @@ After you create a [CyVerse Account](https://user.cyverse.org/) (free), you can 
 Alternately, you can install [Docker](https://docker.com) and run the analysis on your local computer:
 
 ```
-docker run -it --rm -p 8888:8888 -v /home/<your-username>:/data/ -e REDIRECT_URL=http://gpu06.cyverse.org:8080 cyversevice/jupyterlab-geospatial:latest
+docker run -it --rm -p 8888:8888 -v /home/<your-username>:/data/ -e REDIRECT_URL=http://localhost:8888 cyversevice/jupyterlab-geospatial:latest
 ```
 
 Open your browser and navigate to `localhost:8888`
